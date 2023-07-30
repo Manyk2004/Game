@@ -7,19 +7,14 @@ using UnityEngine.UI;
 public class MenuScript : MonoBehaviour
 {
     [SerializeField] private GameObject mainCamera;
-    [SerializeField] private GameObject optionsCamera;
     [SerializeField] private GameObject levelCamera;
     [SerializeField] private GameObject menuPanel;
-    [SerializeField] private GameObject optionsPanel;
     [SerializeField] private GameObject levelPanel;
 
     public void LevelSelection()
     {
         mainCamera.SetActive(false);
         menuPanel.SetActive(false);
-        optionsCamera.SetActive(false);
-        optionsPanel.SetActive(false);
-
         levelCamera.SetActive(true);
         levelPanel.SetActive(true);
     }
@@ -32,19 +27,11 @@ public class MenuScript : MonoBehaviour
 
     public void Options()
     {
-        mainCamera.SetActive(false);
-        menuPanel.SetActive(false);
-        levelCamera.SetActive(false);
-        levelPanel.SetActive(false);
-
-        optionsCamera.SetActive(true);
-        optionsPanel.SetActive(true);
+        SceneManager.LoadScene(4);
     }
 
     public void BackToMenu()
     {
-        optionsCamera.SetActive(false);
-        optionsPanel.SetActive(false);
         levelCamera.SetActive(false);
         levelPanel.SetActive(false);
 
