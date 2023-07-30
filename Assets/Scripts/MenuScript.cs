@@ -27,7 +27,7 @@ public class MenuScript : MonoBehaviour
 
     public void Options()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(0);
     }
 
     public void BackToMenu()
@@ -41,17 +41,17 @@ public class MenuScript : MonoBehaviour
 
     public void StartLevel1()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 
     public void StartLevel2()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void StartLevel3()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
 }
